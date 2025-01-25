@@ -10,7 +10,7 @@ Enjoy. 😊
 ## Usage
 
 1. Write the import path to the TS file you want to import
-Make sure the import path is a relative path to `.remote-ts` which would be generated after running the CLI.
+   Make sure the import path is a relative path to `.remote-ts` which would be generated after running the CLI.
 
 ```ts
 import { myTSVariable } from "./.remote-ts/my-private-project/path-to-file.ts";
@@ -27,3 +27,13 @@ npx remote-ts sync
 
 This library requires you to have all of your personal code projects in individual folders all under a root projects folder.
 If you haven't run the CLI before, it will ask you where your collection projects are located, and this is how it will infer to your projects.
+
+## FAQ
+
+### How do I reset the root project directory?
+
+```bash
+npx remote-ts reset-root
+```
+
+This will allow you to re-enter the root project directory.

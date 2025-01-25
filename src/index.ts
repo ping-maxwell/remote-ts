@@ -4,6 +4,7 @@ import { getArgs } from "./utils/getArgs.js";
 import { syncProjects } from "./sync.js";
 import { getConfig, setConfig } from "./config.js";
 import inquirer from "inquirer";
+import chalk from "chalk";
 
 async function promptForRootProjectDir(): Promise<string> {
   const { rootProjectDir } = await inquirer.prompt([
@@ -44,6 +45,18 @@ async function main() {
 
   if (command === "sync") {
     syncProjects(rootProjectDir);
+  } else if (command === "reset-root") {
+    try {
+      const rootProjectDir = await promptForRootProjectDir();
+      setConfig(rootProjectDir);
+      console.log(
+        chalk.greenBright("Root project directory reset successfully."),
+      );
+    } catch (error: any) {
+      console.log(chalk.red("Failed to set root project directory."));
+      console.error(error.message);
+      process.exit(1);
+    }
   } else {
     console.error(`Unknown command: ${command}`);
     process.exit(1);
