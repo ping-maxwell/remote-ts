@@ -1,13 +1,17 @@
 {
   "name": "remote-ts",
+  "description": "An easy way to remotely add local typescript files across projects.",
+  "keywords": ["remote", "typescript", "ts", "import", "copy", "sync"],
   "license": "MIT",
+  "version": "1.0.0",
   "module": "index.ts",
   "bin": "dist/index.js",
   "type": "module",
   "packageManager": "pnpm@9.6.0",
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node dist/index.js"
+    "start": "tsc && node dist/index.js",
+    "publish": "pnpm publish --no-git-checks"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
