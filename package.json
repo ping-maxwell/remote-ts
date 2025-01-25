@@ -3,7 +3,7 @@
   "description": "An easy way to remotely add local typescript files across projects.",
   "keywords": ["remote", "typescript", "ts", "import", "copy", "sync"],
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "module": "index.ts",
   "bin": "dist/index.js",
   "type": "module",
