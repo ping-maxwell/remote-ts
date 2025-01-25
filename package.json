@@ -8,6 +8,10 @@
   "bin": "dist/index.js",
   "type": "module",
   "packageManager": "pnpm@9.6.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ping-maxwell/remote-ts"
+  },
   "scripts": {
     "build": "tsc",
     "start": "tsc && node dist/index.js",
