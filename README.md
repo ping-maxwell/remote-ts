@@ -1,5 +1,12 @@
 # remote-ts
 
+## Why?
+
+I had a project which required types from another project.
+So I created this simple CLI tool to copy the types from the other project to my project.
+It works by copying the types from the other project to a `.remote-ts` folder in my project.
+Enjoy. 😊
+
 ## Usage
 
 1. Write the import path to the TS file you want to import
